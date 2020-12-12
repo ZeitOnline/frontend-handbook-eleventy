@@ -28,4 +28,24 @@ module.exports = function( eleventyConfig ) {
     .use(markdownItTocDoneRight);
 
   eleventyConfig.setLibrary('md', markdownLib);
+
+  return {
+    templateFormats: [
+      "md",
+      "njk"
+    ],
+
+    markdownTemplateEngine: 'md',
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
+
+    // These are all optional, defaults are shown:
+    dir: {
+      input: ".",
+      includes: "_src",
+      layouts: "_src/layouts",
+      data: "_data",
+      output: "_site"
+    }
+  };
 }
