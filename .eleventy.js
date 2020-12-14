@@ -1,3 +1,4 @@
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const markdownIt = require( "markdown-it" );
 const markdownItAnchor = require( "markdown-it-anchor" );
 const markdownItContainer = require( "markdown-it-container" );
@@ -27,6 +28,8 @@ module.exports = function( eleventyConfig ) {
     })
     .use( markdownItTocDoneRight ); // ${TOC}
 
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setLibrary( "md", markdownLib );
 
   return {
