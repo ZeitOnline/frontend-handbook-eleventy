@@ -1,5 +1,21 @@
 body {
-    max-width: 1000px;
     margin: 0 auto;
     padding: 5px;
+}
+
+@media (min-width: 1000px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-areas: ". nav nav content content content content content content .";
+    }
+
+    .nav {
+        grid-area: nav;
+        display: block;
+    }
+
+    .post {
+        grid-area: content;
+    }
 }
