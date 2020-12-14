@@ -1,0 +1,51 @@
+
+    .nav {
+        align-items: center;
+        border-bottom: 2px currentColor solid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        padding: 2rem 0;
+      }
+      .nav h2 {
+          margin: 0;
+      }
+    
+    .nav-items {
+      list-style: none;
+      margin: 0;
+      vertical-align:middle;
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+    
+    .nav-items > li {
+      float: left;
+    }
+      
+      /* Style the links inside the navigation bar */
+      .nav a {
+        float: left;
+        color: #37352f;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 550;
+      }
+      
+      /* Add a color to the active/current link */
+      .nav a.active {
+        background-color: #fff;
+        color: #37352f;
+      }
+
+
+    /* Change the color of links on hover */
+    .nav a:hover {
+        background-size: 1px;
+        background-color: rgba(55, 53, 47, 0.08);
+        color: #37352f;
+      }
