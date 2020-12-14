@@ -1,12 +1,7 @@
 <div class="nav">
   <div class="nav-left">
-    <h2>ZON Frontend Dev Handbook</h2> 
+    <h2>ZON Frontend Dev Handbook</h2>
   </div>
-  <ul class="nav-items">
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/practices/">Practices</a></li>
-    <li><a href="/guidelines/">Guidelines</a></li>
-    <li><a href="/experiments/">Experiments</a></li>
-    <li><a href="/links/">Links</a></li>
-  </ul>
+  {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({listClass: 'nav-items'}) | safe }}
 </div>
+
