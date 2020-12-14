@@ -6,10 +6,15 @@
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-background: #252525;
+        --color-background: rgb(4%, 5%, 6%);
         --color-text: #FFFFFF;
         --color-link: rgba(255, 255, 255, 0.8);
-        --color-code-background: rgb(4%, 5%, 6%)
+        --color-code-background: #252525;
+    }
+    body {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
     }
 }
 
