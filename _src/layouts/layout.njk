@@ -13,6 +13,10 @@
   </head>
   <body>
 
+  {%- block navigation %}
+  {% include "./nav.njk" %}
+  {%- endblock -%}
+
   {%- block content %}
   {{ content | safe }}
   {%- endblock -%}
