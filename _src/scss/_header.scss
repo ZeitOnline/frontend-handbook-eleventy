@@ -1,3 +1,7 @@
+.nav-items {
+  list-style: none;
+  margin: 0;
+}
 
 @media (max-width: 1000px) {
     .nav {
@@ -14,9 +18,7 @@
       }
     
     .nav-items {
-      list-style: none;
-      margin: 0;
-      vertical-align:middle;
+      vertical-align: middle;
       display: flex;
       flex-grow: 1;
       justify-content: flex-end;
@@ -25,29 +27,45 @@
     .nav-items > li {
       float: left;
     }
-      
-      /* Style the links inside the navigation bar */
-      .nav a {
-        float: left;
-        color: #37352f;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 550;
-      }
-      
-      /* Add a color to the active/current link */
+
+    .nav a {
+      float: left;
+      color: #37352f;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 550;
+    }
+
       .nav a.active {
         background-color: #fff;
         color: #37352f;
       }
 
-
-    /* Change the color of links on hover */
     .nav a:hover {
         background-size: 1px;
         background-color: rgba(55, 53, 47, 0.08);
         color: #37352f;
       }
+
+}
+
+
+@media (min-width: 1000px) {
+
+    h1, h2 {
+      margin: 3rem 0; 
     }
+
+    .nav-items {
+      padding: 0;
+      li {
+        margin: 0.7em 0;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+
+}

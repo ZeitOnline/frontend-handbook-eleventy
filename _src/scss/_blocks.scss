@@ -1,64 +1,44 @@
-
-    h1 {
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-          "Helvetica Neue", Arial, sans-serif;
-        font-size: 52px;
+h1, h2, h3, h4, h5, h6 {
+        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
         font-style: normal;
         font-variant: normal;
         font-weight: 700;
         line-height: 1.1;
+
+        .header-anchor {
+          display: none;
+          line-height: unset;
+        }
+        &:hover .header-anchor {
+          display: inline;
+        }
+      }
+
+    h1 {
+        font-size: 52px;
       }
       
       h2 {
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-          "Helvetica Neue", Arial, sans-serif;
         font-size: 30px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
-        line-height: 1.1;
       }
       
       h3 {
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-          "Helvetica Neue", Arial, sans-serif;
         font-size: 25px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
-        line-height: 1.1;
       }
       
       h4 {
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-          "Helvetica Neue", Arial, sans-serif;
         font-size: 20px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
-        line-height: 1.1;
       }
       
       h5 {
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-          "Helvetica Neue", Arial, sans-serif;
         font-size: 18px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
-        line-height: 1.1;
       }
       
       h6 {
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-          "Helvetica Neue", Arial, sans-serif;
         font-size: 14px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
-        line-height: 1;
       }
-      
+
+
       p {
         font-size: 20px;
         line-height: 150%;
