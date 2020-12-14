@@ -1,33 +1,33 @@
 const markdownIt = require( "markdown-it" );
 const markdownItAnchor = require( "markdown-it-anchor" );
-const markdownItContainer = require('markdown-it-container');
-const markdownItAttrs = require('markdown-it-attrs');
-const markdownItTocDoneRight = require('markdown-it-toc-done-right');
+const markdownItContainer = require( "markdown-it-container" );
+const markdownItAttrs = require( "markdown-it-attrs" );
+const markdownItTocDoneRight = require( "markdown-it-toc-done-right" );
 
 module.exports = function( eleventyConfig ) {
 
   let markdownItOptions = {
-    html: true,
-    linkify: true,
+    html: true, // use html in markdown
+    linkify: false, // do not autolink urls
     typographer: true
   };
 
-  let markdownLib = markdownIt(markdownItOptions)
-    .use(markdownItContainer, 'warning' )
-    .use(markdownItContainer, 'tip' )
-    .use(markdownItAttrs, {
-      leftDelimiter: '{:',
-      rightDelimiter: '}',
-      allowedAttributes: ['id', 'class', /^data\-.*$/],
+  let markdownLib = markdownIt( markdownItOptions )
+    .use( markdownItContainer, "warning" )
+    .use( markdownItContainer, "tip" )
+    .use( markdownItAttrs, {
+      leftDelimiter: "{:",
+      rightDelimiter: "}",
+      allowedAttributes: [ "id", "class", /^data\-.*$/ ],
     })
-    .use(markdownItAnchor, {
-      permalink: true,
-      permalinkBefore: true,
-      permalinkSymbol: '§'
+    .use( markdownItAnchor, {
+      permalink: true, // add anchors to headings
+      permalinkBefore: false, // after the heading
+      permalinkSymbol: "#"
     })
-    .use(markdownItTocDoneRight);
+    .use( markdownItTocDoneRight ); // ${TOC}
 
-  eleventyConfig.setLibrary('md', markdownLib);
+  eleventyConfig.setLibrary( "md", markdownLib );
 
   return {
     templateFormats: [
@@ -35,7 +35,7 @@ module.exports = function( eleventyConfig ) {
       "njk"
     ],
 
-    markdownTemplateEngine: 'md',
+    markdownTemplateEngine: "md",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
 
