@@ -1,5 +1,6 @@
 :root {
     --color-background: #FFFFFF;
+    --color-big-content-background: #F8F8F8;
     --color-text: #252525;
     --color-link: rgba(37, 37, 37, 0.8);
     --color-code-background: rgb(96%, 95%, 94%)
@@ -7,6 +8,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --color-background: rgb(4%, 5%, 6%);
+        --color-big-content-background: #090909;
         --color-text: #FFFFFF;
         --color-link: rgba(255, 255, 255, 0.8);
         --color-code-background: #252525;

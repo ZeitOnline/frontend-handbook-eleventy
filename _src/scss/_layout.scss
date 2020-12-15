@@ -1,9 +1,15 @@
 body {
     margin: 0 auto;
-    padding: 5px;
+    padding: 0;
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 1400px) {
+    .nav, .post {
+        padding: 16px;
+    }
+}
+
+@media (min-width: 1400px) {
     body {
         display: grid;
         grid-template-columns: repeat(10, 1fr);
@@ -25,13 +31,13 @@ body {
             padding: 0.3em 0.5em 0.2em;
             margin-left: -0.5em;
             &:hover {
-                background-color: #f8f8f8;
+                background-color: var(--color-big-content-background);
             }
         }
     }
 
     .post {
-        background: #f8f8f8;
+        background: var(--color-big-content-background);
         grid-area: content;
         padding-left: 5vw;
         padding-right: 5vw;
