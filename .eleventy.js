@@ -32,6 +32,22 @@ module.exports = function( eleventyConfig ) {
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setLibrary( "md", markdownLib );
 
+  eleventyConfig.addCollection("customMetadata", function(collectionApi) {
+    const posts = collectionApi.getAll();
+    posts.forEach(post => {
+      inputContent = post.template.inputContent;
+      post.customTitle = post.template.inputContent.substring(
+        inputContent.indexOf('# ') + 2,
+        inputContent.indexOf('\n')
+      )
+    })
+    return posts;
+  });
+
+  eleventyConfig.addFilter("getPageTitle", function(post) {
+    return post.customTitle;
+  });
+
   return {
     templateFormats: [
       "md",
