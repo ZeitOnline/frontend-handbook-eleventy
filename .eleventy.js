@@ -4,6 +4,7 @@ const markdownItAnchor = require( "markdown-it-anchor" );
 const markdownItContainer = require( "markdown-it-container" );
 const markdownItAttrs = require( "markdown-it-attrs" );
 const markdownItTocDoneRight = require( "markdown-it-toc-done-right" );
+const prism = require('markdown-it-prism');
 
 module.exports = function( eleventyConfig ) {
 
@@ -25,6 +26,10 @@ module.exports = function( eleventyConfig ) {
       permalink: true, // add anchors to headings
       permalinkBefore: false, // after the heading
       permalinkSymbol: "#"
+    })
+    .use(prism, {
+      defaultLanguageForUnknown: 'jinja2',
+      defaultLanguageForUnspecified: 'js'
     })
     .use( markdownItTocDoneRight ); // ${TOC}
 
