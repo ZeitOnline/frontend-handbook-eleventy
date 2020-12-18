@@ -1,4 +1,4 @@
-# ZEIT ONLINE Developer Blog
+# Blog
 
 ## Contents
 

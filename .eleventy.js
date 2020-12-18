@@ -1,4 +1,3 @@
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const markdownIt = require( "markdown-it" );
 const markdownItAnchor = require( "markdown-it-anchor" );
 const markdownItContainer = require( "markdown-it-container" );
@@ -33,7 +32,6 @@ module.exports = function( eleventyConfig ) {
     })
     .use( markdownItTocDoneRight ); // ${TOC}
 
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setLibrary( "md", markdownLib );
 
@@ -51,6 +49,21 @@ module.exports = function( eleventyConfig ) {
 
   eleventyConfig.addFilter("getPageTitle", function(post) {
     return post.customTitle;
+  });
+
+  eleventyConfig.addFilter("generateEleventyNavigation", function(posts) {
+    var pages = [];
+    posts.forEach(post => {
+      if (post.filePathStem.includes('/index')) {
+        pages.push({
+            key: post.filePathStem === '/index' ? 'a' : post.fileSlug, // index shall be first page
+            url: post.url,
+            title: post.filePathStem === '/index' ? 'Home' : post.customTitle, // index should have title "Home"
+            children: []
+        })
+      }
+    })
+    return pages.sort((a, b) => a.key.localeCompare(b.key));
   });
 
   return {

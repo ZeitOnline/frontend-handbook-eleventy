@@ -1,4 +1,4 @@
-# ZEIT ONLINE Frontend Developer Handbook
+ # ZEIT ONLINE Frontend Developer Handbook
 
 In diesem Handbuch sammeln wir vom Team ZEIT Online Frontend unsere Dokumentation. Coding-Guidelines und Best Practice Artikel sind hilfreich für neue Teammitglieder. Interessante Links und Coding-Experimente können für die Kollegen interessant sein. Und wir schreiben kurze Blog-Artikel, um Erkenntnisse festzuhalten und um des Bloggens willen.
 
