@@ -7,7 +7,7 @@
     <script>
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, ' ') + ' js';
     </script>
-    <title> {{ collections.customMetadata | getCollectionItem(page) | getPageTitle }}</title>
+    <title>{{ collections.customMetadata | getCollectionItem(page) | getPageTitle }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
   </head>
