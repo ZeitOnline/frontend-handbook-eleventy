@@ -4,6 +4,7 @@ const markdownItAnchor = require( "markdown-it-anchor" );
 const markdownItContainer = require( "markdown-it-container" );
 const markdownItAttrs = require( "markdown-it-attrs" );
 const markdownItTocDoneRight = require( "markdown-it-toc-done-right" );
+const syntaxHighlight = require( "@11ty/eleventy-plugin-syntaxhighlight" );
 
 module.exports = function( eleventyConfig ) {
 
@@ -29,6 +30,7 @@ module.exports = function( eleventyConfig ) {
     .use( markdownItTocDoneRight ); // ${TOC}
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setLibrary( "md", markdownLib );
 
@@ -54,7 +56,7 @@ module.exports = function( eleventyConfig ) {
       "njk"
     ],
 
-    markdownTemplateEngine: "md",
+    markdownTemplateEngine: false,
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
 
