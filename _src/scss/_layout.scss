@@ -1,46 +1,46 @@
 body {
-    margin: 0 auto;
-    padding: 0;
+	margin: 0 auto;
+	padding: 0;
 }
 
 @media (max-width: 1400px) {
-    .nav, .post {
-        padding: 16px;
-    }
+	.nav, .post {
+		padding: 16px;
+	}
 }
 
 @media (min-width: 1400px) {
-    body {
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-areas: ". nav nav content content content content content content content";
-    }
+	body {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-areas: ". nav nav content content content content content content content";
+	}
 
-    .nav {
-        grid-area: nav;
-        display: block;
-        padding-right: 5vw;
-        
-        h2 {
-            font-size: 52px; // like post h1
-        }
+	.nav {
+		grid-area: nav;
+		display: block;
+		padding-right: 5vw;
 
-        a {
-            border-radius: 3px;
-            display: block;
-            padding: 0.3em 0.5em 0.2em;
-            margin-left: -0.5em;
-            &:hover {
-                background-color: var(--color-big-content-background);
-            }
-        }
-    }
+		h2 {
+			font-size: 52px; // like post h1
+		}
 
-    .post {
-        background: var(--color-big-content-background);
-        grid-area: content;
-        padding-left: 5vw;
-        padding-right: 5vw;
-        min-height: 100vh;
-    }
+		a {
+			border-radius: 3px;
+			display: block;
+			padding: 0.3em 0.5em 0.2em;
+			margin-left: -0.5em;
+			&:hover {
+				background-color: var(--color-big-content-background);
+			}
+		}
+	}
+
+	.post {
+		background: var(--color-big-content-background);
+		grid-area: content;
+		padding-left: 5vw;
+		padding-right: 5vw;
+		min-height: 100vh;
+	}
 }

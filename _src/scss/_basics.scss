@@ -1,43 +1,42 @@
 :root {
-    --color-background: #FFFFFF;
-    --color-big-content-background: #F8F8F8;
-    --color-text: #252525;
-    --color-link: rgba(37, 37, 37, 0.8);
-    --color-code-background: rgb(96%, 95%, 94%)
+	--color-background: #FFFFFF;
+	--color-big-content-background: #F8F8F8;
+	--color-text: #252525;
+	--color-link: rgba(37, 37, 37, 0.8);
+	--color-code-background: rgb(96%, 95%, 94%)
 }
 @media (prefers-color-scheme: dark) {
-    :root {
-        --color-background: rgb(4%, 5%, 6%);
-        --color-big-content-background: #090909;
-        --color-text: #FFFFFF;
-        --color-link: rgba(255, 255, 255, 0.8);
-        --color-code-background: #252525;
-    }
-    body {
+	:root {
+		--color-background: rgb(4%, 5%, 6%);
+		--color-big-content-background: #090909;
+		--color-text: #FFFFFF;
+		--color-link: rgba(255, 255, 255, 0.8);
+		--color-code-background: #252525;
+	}
+	body {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-rendering: optimizeLegibility;
-    }
+	}
 }
 
 body {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    font-family: inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-      "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-    font-weight: 500;
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-family: inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+	  "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+	font-weight: 500;
 }
 
 a {
-    color: var(--color-link);
-    line-height: 150%;
-    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-      "Helvetica Neue", sans-serif;
-    text-decoration: underline;
+	color: var(--color-link);
+	line-height: 150%;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+	  "Helvetica Neue", sans-serif;
+	text-decoration: underline;
   }
 
   a:hover {
-      color: var(--color-text);
+	  color: var(--color-text);
   }
-  
-  
+

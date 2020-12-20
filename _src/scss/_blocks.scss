@@ -1,131 +1,138 @@
 h1, h2, h3, h4, h5, h6 {
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
-        line-height: 1.1;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 1.1;
 
-        .header-anchor {
-          display: none;
-          line-height: unset;
-        }
-        &:hover .header-anchor {
-          display: inline;
-        }
-      }
+	.header-anchor {
+		display: none;
+		line-height: unset;
+	}
 
-    h1 {
-        font-size: 52px;
-      }
-      
-      h2 {
-        font-size: 30px;
-      }
-      
-      h3 {
-        font-size: 25px;
-      }
-      
-      h4 {
-        font-size: 20px;
-      }
-      
-      h5 {
-        font-size: 18px;
-      }
-      
-      h6 {
-        font-size: 14px;
-      }
+	&:hover .header-anchor {
+		display: inline;
+	}
+}
+
+h1 {
+	font-size: 52px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 25px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 14px;
+}
 
 
-      p {
-        font-size: 20px;
-        line-height: 150%;
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-          "Helvetica Neue", Arial, sans-serif;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 400;
-      }
-      
-    pre code {
-        padding: 15px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        margin-left: 5px;
-        margin-right: 5px;
-        font-size: 17px;
-        font-family: monospace;
-        border-radius: 3px;
-        line-height: 1.25;
-      }
-      
-      pre {
-        background: var(--color-code-background);
-        padding: 1ch;
-      }
-      
-      blockquote {
-        background: #f9f9f9;
-        border-left: 10px solid #ccc;
-        margin: 1.5em 10px;
-        padding: 40px 20px;
-        quotes: "\201C""\201D""\2018""\2019";
-        font-size: 20px;
-        line-height: 150%;
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-          "Helvetica Neue", Arial, sans-serif;
-        font-style: italic;
-      }
-      blockquote:before {
-        color: #ccc;
-        content: open-quote;
-        font-size: 4em;
-        line-height: 0.1em;
-        margin-right: 0.25em;
-        vertical-align: -0.4em;
-      }
-    blockquote span {
-      float: right;
-    }
-      
+p {
+	font-size: 20px;
+	line-height: 150%;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+		"Helvetica Neue", Arial, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+}
 
-    
-    ul {
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-          "Helvetica Neue", Arial, sans-serif;
-      }
-      
-      li {
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-          "Helvetica Neue", Arial, sans-serif;
-        font-size: 20px;
-        line-height: 1.5;
-      }
-      
-      table {
-        border: 1px solid #333;
-        border-collapse: collapse;
-        padding: 20px;
-      }
-      
-      tr {
-        border: 1px solid #333;
-        padding: 10px;
-      }
-      tr:nth-child(even) {
-        background-color: #f1f1f1;
-      }
-      
-      td {
-        border: 1px solid #333;
-        padding: 10px;
-      }
-      
-      th {
-        border: 1px solid #333;
-        text-align: left;
-        padding: 20px;
-      }
-      
+pre code {
+	padding: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: 17px;
+	font-family: monospace;
+	border-radius: 3px;
+	line-height: 1.25;
+}
+
+pre {
+	background: var(--color-code-background);
+	padding: 1ch;
+}
+
+blockquote {
+	background: #f9f9f9;
+	border-left: 10px solid #ccc;
+	margin: 1.5em 10px;
+	padding: 40px 20px;
+	quotes: "\201C""\201D""\2018""\2019";
+	font-size: 20px;
+	line-height: 150%;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+		"Helvetica Neue", Arial, sans-serif;
+	font-style: italic;
+}
+
+blockquote:before {
+	color: #ccc;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+
+blockquote span {
+	float: right;
+}
+
+
+
+ul {
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+		"Helvetica Neue", Arial, sans-serif;
+	}
+
+li {
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+		"Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+table {
+	border: 1px solid #333;
+	border-collapse: collapse;
+	padding: 20px;
+}
+
+tr {
+	border: 1px solid #333;
+	padding: 10px;
+}
+
+tr:nth-child(even) {
+	background-color: #f1f1f1;
+}
+
+td {
+	border: 1px solid #333;
+	padding: 10px;
+}
+
+th {
+	border: 1px solid #333;
+	text-align: left;
+	padding: 20px;
+}
+
+img {
+	max-width: 100%;
+}
