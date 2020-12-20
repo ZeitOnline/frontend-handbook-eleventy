@@ -4,6 +4,7 @@ const markdownItContainer = require( "markdown-it-container" );
 const markdownItAttrs = require( "markdown-it-attrs" );
 const markdownItTocDoneRight = require( "markdown-it-toc-done-right" );
 const prism = require('markdown-it-prism');
+const filters = require('./utils/filters.js')
 
 module.exports = function( eleventyConfig ) {
 
@@ -47,24 +48,13 @@ module.exports = function( eleventyConfig ) {
     return posts;
   });
 
-  eleventyConfig.addFilter("getPageTitle", function(post) {
-    return post.customTitle;
-  });
-
-  eleventyConfig.addFilter("generateEleventyNavigation", function(posts) {
-    var pages = [];
-    posts.forEach(post => {
-      if (post.filePathStem.includes('/index')) {
-        pages.push({
-            key: post.filePathStem === '/index' ? 'a' : post.fileSlug, // index shall be first page
-            url: post.url,
-            title: post.filePathStem === '/index' ? 'Home' : post.customTitle, // index should have title "Home"
-            children: []
-        })
-      }
-    })
-    return pages.sort((a, b) => a.key.localeCompare(b.key));
-  });
+  /**
+	 * Filters
+	 * @link https://www.11ty.io/docs/filters/
+	 */
+	Object.keys(filters).forEach((filterName) => {
+		eleventyConfig.addFilter(filterName, filters[filterName])
+	});
 
   return {
     templateFormats: [
