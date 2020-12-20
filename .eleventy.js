@@ -62,7 +62,7 @@ module.exports = function( eleventyConfig ) {
       "njk"
     ],
 
-    markdownTemplateEngine: false,
+    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
 

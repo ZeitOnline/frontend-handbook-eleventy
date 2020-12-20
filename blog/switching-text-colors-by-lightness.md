@@ -33,12 +33,14 @@ def color_is_dark(hexcolor):
 
 If the color is defined as dark (lower than 0.6) we add a modifier class to the teaser to change colors of the content:
 
-```jinja
+```jinja2
+{% verbatim %}
 {% block teaser_modifier -%}
     {% if teaser.serie.color -%}
         {{ 'teaser--light-text' if teaser.serie.color | color_is_dark }}
     {%- endif %}
 {%- endblock %}
+{% endverbatim %}
 ```
 
 In the CSS we change now text colors based on the background color, from dark gray on light backgrounds to white on dark backgrounds. For testing purposes we put two versions of the feature on a test page one with light and one with dark background and do a11y tests on them with [axe](https://github.com/mozilla-services/axe-selenium-python) and [Selenium](https://selenium-python.readthedocs.io/) (we use [pytest](https://docs.pytest.org/en/latest/) for these things).
@@ -69,7 +71,7 @@ Based on the CSS-Tricks method there is [a codepen](https://codepen.io/codecandi
 ### Articles
 - [Switch font color for different backgrounds with CSS](https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/)
 
- 
+
 ### Webstandards
 - [Techniques For Accessibility Evaluation And Repair Tools Working Draft](https://www.w3.org/TR/AERT/#color-contrast)
 

@@ -4,7 +4,7 @@ The document outline is a way to overview and navigate a web page. It provides a
 
 ## What is the document outline?
 
-The document outline represents the logical or semantical structure of an HTML document. This is a little difficult because there are two concepts: hierarchy of headlines `h1` to `h6` and the nested structure of `sections` and `divs`. 
+The document outline represents the logical or semantical structure of an HTML document. This is a little difficult because there are two concepts: hierarchy of headlines `h1` to `h6` and the nested structure of `sections` and `divs`.
 
 That whole topic is a [big dilemma](https://css-tricks.com/document-outline-dilemma/), but nevertheless we can try to improve our sites to explain the sites structure to people (or machines) who cannot access the visible representation.
 
@@ -19,9 +19,9 @@ There are ways to make the document outline visible. The easiest one is a Chrome
 
 The same tool is also available as [Bookmarklet](https://h5o.github.io/bookmarklet.html).
 
-Another great tool is the [Nu Html Checker from the W3C](https://validator.w3.org/nu/), which checks online URLs, but also accepts text input, which enabled us to test local versions of our site during development. 
+Another great tool is the [Nu Html Checker from the W3C](https://validator.w3.org/nu/), which checks online URLs, but also accepts text input, which enabled us to test local versions of our site during development.
 
-The HTML Checker provides [two kinds of outline](https://validator.w3.org/nu/?showoutline=yes&doc=https%3A%2F%2Fwww.zeit.de%2Findex), which illustrates perfectly the dilemma mentioned above: 
+The HTML Checker provides [two kinds of outline](https://validator.w3.org/nu/?showoutline=yes&doc=https%3A%2F%2Fwww.zeit.de%2Findex), which illustrates perfectly the dilemma mentioned above:
 
 ![heading level outline](./images/document-outline/w3c-outline-example-headings.png)
 
@@ -34,7 +34,7 @@ The HTML Checker provides [two kinds of outline](https://validator.w3.org/nu/?sh
 
 The type HTML tags that we use directly shapes the document structure. While `divs` are just containers for styling purpose, the `section` and `article` HTML5 tags actually provide meaning and structure.
 
-```
+```html
 <div>
     <h2>Meistgelesene Artikel</h2>
     <ol>
@@ -46,7 +46,7 @@ The type HTML tags that we use directly shapes the document structure. While `di
 ```
 ![](./images/document-outline/containertag-section-before.png)
 
-```
+```html
 <section>
   <h2>Meistgelesene Artikel</h2>
   <ol>
@@ -58,13 +58,13 @@ The type HTML tags that we use directly shapes the document structure. While `di
 ```
 ![](./images/document-outline/containertag-section-after.png)
 
-By using a `section` instead of a `div` we opened a new outline scope/nesting and made clear that the headline type actually represents a hierarchy. 
+By using a `section` instead of a `div` we opened a new outline scope/nesting and made clear that the headline type actually represents a hierarchy.
 
 In another case, we changed the container tag the other way around: from `section` to `div`. A teaser box which was defined as `section` also had a `section` as wrapper, which resulted from our CMS structure and the way centerpages are built. These two nested sections were reflected in the document outline, with one superficial level:
 
 ![](./images/document-outline/containertag-flatten-before.png)
 
-```
+```html
 <div>
     <section>
       <section> <!-- this was changed to div -->
@@ -78,7 +78,7 @@ In another case, we changed the container tag the other way around: from `sectio
 </div>
 ```
 
-By changing one container from `section` to `div`, we could flatten the outline hierarchy. 
+By changing one container from `section` to `div`, we could flatten the outline hierarchy.
 
 ![](./images/document-outline/containertag-flatten-after.png)
 
@@ -94,11 +94,11 @@ By assigning headline status to text nodes which do not look like headlines (in 
 ![](./images/document-outline/shop-screenshot.png)
 
 before:
-```<p class="shopitem__text">{{ teaser.teaserText }}</p>```
+```<p class="shopitem__text">{% verbatim %}{{ teaser.teaserText }}{% endverbatim %}</p>```
 ![](./images/document-outline/shop-title-paragraph.png)
 
 after:
-```<h3 class="shopitem__text">{{ teaser.teaserText }}</h3>```
+```<h3 class="shopitem__text">{% verbatim %}{{ teaser.teaserText }}{% endverbatim %}</h3>```
 ![](./images/document-outline/shop-title-headline.png)
 
 By the way, these changes are easily done because we use [BEM](https://blog.zeit.de/dev/block-element-modifier/) as our CSS system.
@@ -107,10 +107,10 @@ By the way, these changes are easily done because we use [BEM](https://blog.zeit
 ## How we can improve more
 
 
-* We still have untitled sections 
+* We still have untitled sections
 ![](./images/document-outline/improvement-untitled-sections.png)
 
-* Some things should be hidden from the outline (or even the DOM) 
+* Some things should be hidden from the outline (or even the DOM)
 ![](./images/document-outline/improvement-reloadbox.png)
 
 
