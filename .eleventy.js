@@ -33,6 +33,7 @@ module.exports = function( eleventyConfig ) {
     })
     .use( markdownItTocDoneRight ); // ${TOC}
 
+  eleventyConfig.addPassthroughCopy('blog/images/')
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setLibrary( "md", markdownLib );
 

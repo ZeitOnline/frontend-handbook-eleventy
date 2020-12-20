@@ -2,4 +2,4 @@
 
 ## Contents
 
-* [Peer Code Reviews](../peer-code-reviews.md)
+* [Peer Code Reviews](./peer-code-reviews.html)
