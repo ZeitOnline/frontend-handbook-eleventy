@@ -14,13 +14,17 @@
   </head>
   <body>
 
+  <header class="nav">
   {%- block navigation %}
-  {% include "../partials/nav.njk" %}
+  {% include "../_partials/nav.njk" %}
   {%- endblock -%}
+  </header>
 
+  <main class="main">
   {%- block content %}
   {{ content | safe }}
   {%- endblock -%}
+  </main>
 
   </body>
 </html>
