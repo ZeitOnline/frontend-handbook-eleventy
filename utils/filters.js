@@ -1,3 +1,5 @@
+const { DateTime } = require("luxon");
+
 module.exports = {
 
   /**
@@ -20,5 +22,7 @@ module.exports = {
     })
     return pages.sort((a, b) => a.key.localeCompare(b.key));
   },
+
+  readableDate: (dateObj) => DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy"),
 
 }

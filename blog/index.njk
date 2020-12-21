@@ -1,0 +1,9 @@
+---
+layout: "index.njk"
+title: "Blog"
+tags: index
+---
+
+<h1>{{ title }}</h1>
+{% set postslist = collections.blog %}
+{% include "_partials/postslist.njk" %}

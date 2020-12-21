@@ -40,11 +40,15 @@ module.exports = function( eleventyConfig ) {
   eleventyConfig.addCollection("customMetadata", function(collectionApi) {
     const posts = collectionApi.getAll();
     posts.forEach(post => {
-      inputContent = post.template.inputContent;
-      post.customTitle = post.template.inputContent.substring(
-        inputContent.indexOf('# ') + 2,
-        inputContent.indexOf('\n')
-      )
+      if ( post.data.title ) {
+        post.customTitle = post.data.title;
+      } else {
+        const inputContent = post.template.inputContent;
+        post.customTitle = post.template.inputContent.substring(
+          inputContent.indexOf('# ') + 2,
+          inputContent.indexOf('\n')
+        )
+      }
     })
     return posts;
   });
