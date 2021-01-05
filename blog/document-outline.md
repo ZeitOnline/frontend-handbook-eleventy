@@ -1,7 +1,7 @@
 # Small Wins: Improving our Document Outline
 
 The document outline is a way to overview and navigate a web page. It provides a high-level overview on a page, and is mostly used by screen readers to provide meaning and allow navigation for people who cannot access the visual representation of the page. At ZEIT Online we actively shape this outline, in order to improve the accessibility of our news website. This post shows some practical examples of that process.
-
+<!-- more -->
 ## What is the document outline?
 
 The document outline represents the logical or semantical structure of an HTML document. This is a little difficult because there are two concepts: hierarchy of headlines `h1` to `h6` and the nested structure of `sections` and `divs`.

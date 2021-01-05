@@ -5,6 +5,7 @@ const markdownItAttrs = require( "markdown-it-attrs" );
 const markdownItTocDoneRight = require( "markdown-it-toc-done-right" );
 const prism = require('markdown-it-prism');
 const filters = require('./utils/filters.js')
+const striptags = require("striptags");
 
 module.exports = function( eleventyConfig ) {
 
@@ -49,7 +50,19 @@ module.exports = function( eleventyConfig ) {
           inputContent.indexOf('\n')
         )
       }
-    })
+      const content = post.template.inputContent;
+      // The start and end separators to try and match to extract the excerpt
+      const separatorsList = [
+        { start: '\n\n', end: '<!-- more -->' },
+        { start: '\n\n', end: '\n\n' }
+      ];
+      separatorsList.some(separators => {
+        const startPosition = content.indexOf(separators.start);
+        const endPosition = content.indexOf(separators.end);
+        post.excerpt = content.substring(startPosition + separators.start.length, endPosition).trim();
+        return true;
+      });
+    });
     return posts;
   });
 

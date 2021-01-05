@@ -2,12 +2,13 @@
   {% if not post.data.tags.includes('index') %}
   <article class="post">
     <header>
-      <h3><a href="{{ post.url | url }}" class="postlist-link">{{ post | getPageTitle }}</a></h3>
+      <h3><a href="{{ post.url | url }}">{{ post | getPageTitle }}</a></h3>
       <!--
       We won't have postdates, as the markdown lacks them and filedate is unusable
       <time class="postlist-date" datetime="{{ post.date }}">{{ post.date | readableDate }}</time>
       -->
     </header>
+    <div class="post-content">{{ post | getExcerpt }}</div>
   </article>
   {% endif %}
 {% endfor %}

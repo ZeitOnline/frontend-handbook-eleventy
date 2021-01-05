@@ -8,6 +8,8 @@ module.exports = {
    */
   getPageTitle: (post) => post.customTitle,
 
+  getExcerpt: (post) => post.excerpt,
+
   generateEleventyNavigation: (posts) => {
     var pages = [];
     posts.forEach(post => {
