@@ -45,9 +45,10 @@ module.exports = function( eleventyConfig ) {
         post.customTitle = post.data.title;
       } else {
         const inputContent = post.template.inputContent;
+        const start = inputContent.indexOf('# ') + 2;
         post.customTitle = post.template.inputContent.substring(
-          inputContent.indexOf('# ') + 2,
-          inputContent.indexOf('\n')
+          start,
+          inputContent.indexOf('\n', start)
         )
       }
       const content = post.template.inputContent;
