@@ -1,7 +1,11 @@
+---
+date: 2019-03-05
+---
+
 # Switching text colors in subject to its background color lightness
 
 Sometimes you build a feature with the feeling, there is something that can go wrong afterwards. In this case we built a CMS feature where the editor could decide more or less about the background color of a part of the website. This poses in our thinking a threat to the accessibility of the foreground text, falling behind in contrast in the best case, being completely unreadable in the worst case. No user would certainly choose a black background with black text on it, but what about some of the so loved shades of gray? So… we looked for a solution to change text colors automatically.
-
+<!-- more -->
 What we found was [Switch font color for different backgrounds with CSS](https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/) over at CSS-Tricks, which uses css variables (and a css math coding trick from hell to achieve conditional statements) to change text colors in subject to its background. But the article also led to the [Techniques For Accessibility Evaluation And Repair Tools Working Draft](https://www.w3.org/TR/AERT/#color-contrast) of the W3C, which includes an equation to estimate _perceived lightness_ of colors.
 
 ```
