@@ -53,8 +53,7 @@ module.exports = function( eleventyConfig ) {
       const content = post.template.inputContent;
       // The start and end separators to try and match to extract the excerpt
       const separatorsList = [
-        { start: '\n\n', end: '<!-- more -->' },
-        { start: '\n\n', end: '\n\n' }
+        { start: '\n\n', end: '<!-- more -->' }
       ];
       separatorsList.some(separators => {
         const startPosition = content.indexOf(separators.start);
